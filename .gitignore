@@ -1,0 +1,7 @@
+server/node_modules/
+
+client/ugc/node_modules/
+
+server/.env
+
+client/ugc/.env

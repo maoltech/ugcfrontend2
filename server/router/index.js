@@ -7,4 +7,4 @@ router.use('/service', service)
 
 
 
-module.exports(router)
+module.exports = router

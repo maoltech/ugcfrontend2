@@ -7,7 +7,7 @@ const Section5 = () => {
         <h2 className="font-[500] leading-[84px] text-center text-[#111827] text-[2rem]">
           Some Success Stories
         </h2>
-        <div className="flex items-start justify-between gap-[2rem]">
+        <div className="flex items-start justify-between gap-[2rem] bg-[#F8FAFC] rounded-[10px]">
           <img
             src={img}
             alt="img"

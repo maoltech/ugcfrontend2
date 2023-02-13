@@ -7,7 +7,7 @@ import { AiOutlineStar } from "react-icons/ai";
 const HeroSection = () => {
   return (
     <div>
-      <div className="w-[80%] mx-auto pt-[2rem]">
+      <div className="w-[80%] mx-auto">
         <div
           style={{ backgroundImage: `url(${HeroBg})`, backgroundSize: "cover" }}
           className="rounded-[10px] py-[2rem] w-full"

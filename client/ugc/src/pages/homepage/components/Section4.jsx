@@ -1,6 +1,6 @@
 import HeroBg from "../../../assets/herobg.svg";
 import vectorline from "../../../assets/vectorline.svg";
-import { IoIosArrowDropright } from "react-icons/io";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 const Section4 = () => {
   return (
     <div
@@ -9,68 +9,92 @@ const Section4 = () => {
         backgroundSize: "cover",
         clipPath: "polygon(0 20%, 100% 10%, 100% 80%, 0 95%)",
       }}
-      className="py-[5rem] w-full"
+      className="py-[8rem] w-full"
     >
       <div className="w-[80%] mx-auto">
         <h2 className="text-center font-[600] text-[#F8FAFC] text-[2rem]">
           How it works ?
         </h2>
-        <div>
+        <div className="text-white">
           <div className="flex justify-center">
             <div className="flex items-center">
-              <div
-                style={{
-                  boxShadow:
-                    "0 6px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 5px rgba(0, 0, 0, 0.3)",
-                }}
-                className="bg-[#0030AB] font-[900] text-[2rem] text-[#F8FAFC] w-[89px] h-[89px] rounded-full flex items-center justify-center"
-              >
-                1
+              <div className="flex flex-col items-center">
+                <div
+                  style={{
+                    boxShadow:
+                      "0 6px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 5px rgba(0, 0, 0, 0.3)",
+                  }}
+                  className="bg-[#0030AB] font-[900] text-[2rem] text-[#F8FAFC] w-[89px] h-[89px] rounded-full flex items-center justify-center"
+                >
+                  1
+                </div>
+                <div>Place Order</div>
+                <div className="leading-[24px] text-center">
+                  Choose the type of content that your brand requires.
+                </div>
               </div>
               <div className="relative">
-                <img src={vectorline} className="w-[100px]" />
-                <IoIosArrowDropright className="absolute text-[2rem] text-[#0041EA]/[80%] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" />
+                <img src={vectorline} className="w-[250px]" />
+                <IoIosArrowDroprightCircle className="absolute text-[2rem] text-[#0041EA]/[80%] rounded-full bg-white top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" />
               </div>
             </div>
             <div className="flex items-center">
-              <div
-                style={{
-                  boxShadow:
-                    "0 6px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 5px rgba(0, 0, 0, 0.3)",
-                }}
-                className="bg-[#0030AB] font-[900] text-[2rem] text-[#F8FAFC] w-[89px] h-[89px] rounded-full flex items-center justify-center"
-              >
-                2
+              <div className="flex flex-col items-center">
+                <div
+                  style={{
+                    boxShadow:
+                      "0 6px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 5px rgba(0, 0, 0, 0.3)",
+                  }}
+                  className="bg-[#0030AB] font-[900] text-[2rem] text-[#F8FAFC] w-[89px] h-[89px] rounded-full flex items-center justify-center"
+                >
+                  2
+                </div>
+                <div>Place Order</div>
+                <div className="leading-[24px] text-center">
+                  Choose the type of content that your brand requires.
+                </div>
               </div>
               <div className="relative">
-                <img src={vectorline} className="w-[100px]" />
-                <IoIosArrowDropright className="absolute text-[2rem] text-[#0041EA]/[80%] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" />
+                <img src={vectorline} className="w-[250px]" />
+                <IoIosArrowDroprightCircle className="absolute text-[2rem] text-[#0041EA]/[80%] rounded-full bg-white top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" />
               </div>
             </div>
             <div className="flex items-center">
-              <div
-                style={{
-                  boxShadow:
-                    "0 6px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 5px rgba(0, 0, 0, 0.3)",
-                }}
-                className="bg-[#0030AB] font-[900] text-[2rem] text-[#F8FAFC] w-[89px] h-[89px] rounded-full flex items-center justify-center"
-              >
-                3
+              <div className="flex flex-col items-center">
+                <div
+                  style={{
+                    boxShadow:
+                      "0 6px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 5px rgba(0, 0, 0, 0.3)",
+                  }}
+                  className="bg-[#0030AB] font-[900] text-[2rem] text-[#F8FAFC] w-[89px] h-[89px] rounded-full flex items-center justify-center"
+                >
+                  3
+                </div>
+                <div>Place Order</div>
+                <div className="leading-[24px] text-center">
+                  Choose the type of content that your brand requires.
+                </div>
               </div>
               <div className="relative">
-                <img src={vectorline} className="w-[100px]" />
-                <IoIosArrowDropright className="absolute text-[2rem] text-[#0041EA]/[80%] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" />
+                <img src={vectorline} className="w-[250px]" />
+                <IoIosArrowDroprightCircle className="absolute text-[2rem] text-[#0041EA]/[80%] rounded-full bg-white top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" />
               </div>
             </div>
             <div className="flex items-center">
-              <div
-                style={{
-                  boxShadow:
-                    "0 6px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 5px rgba(0, 0, 0, 0.3)",
-                }}
-                className="bg-[#0030AB] font-[900] text-[2rem] text-[#F8FAFC] w-[89px] h-[89px] rounded-full flex items-center justify-center"
-              >
-                4
+              <div className="flex flex-col items-center">
+                <div
+                  style={{
+                    boxShadow:
+                      "0 6px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 5px rgba(0, 0, 0, 0.3)",
+                  }}
+                  className="bg-[#0030AB] font-[900] text-[2rem] text-[#F8FAFC] w-[89px] h-[89px] rounded-full flex items-center justify-center"
+                >
+                  4
+                </div>
+                <div>Place Order</div>
+                <div className="leading-[24px] text-center">
+                  Choose the type of content that your brand requires.
+                </div>
               </div>
             </div>
           </div>

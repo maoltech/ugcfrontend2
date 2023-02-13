@@ -9,16 +9,16 @@ const Section4 = () => {
         backgroundSize: "cover",
         clipPath: "polygon(0 20%, 100% 10%, 100% 80%, 0 95%)",
       }}
-      className="py-[8rem] w-full"
+      className="py-[10rem] w-full"
     >
       <div className="w-[80%] mx-auto">
-        <h2 className="text-center font-[600] text-[#F8FAFC] text-[2rem]">
+        <h2 className="text-center font-[600] mb-[1rem] text-[#F8FAFC] text-[2rem]">
           How it works ?
         </h2>
         <div className="text-white">
           <div className="flex justify-center">
             <div className="flex items-center">
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center gap-[0.5rem]">
                 <div
                   style={{
                     boxShadow:
@@ -39,7 +39,7 @@ const Section4 = () => {
               </div>
             </div>
             <div className="flex items-center">
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center gap-[0.5rem]">
                 <div
                   style={{
                     boxShadow:
@@ -49,9 +49,10 @@ const Section4 = () => {
                 >
                   2
                 </div>
-                <div>Place Order</div>
+                <div>Complete Brief</div>
                 <div className="leading-[24px] text-center">
-                  Choose the type of content that your brand requires.
+                  To learn more about your project, please fill out our creative
+                  brief.
                 </div>
               </div>
               <div className="relative">
@@ -60,7 +61,7 @@ const Section4 = () => {
               </div>
             </div>
             <div className="flex items-center">
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center gap-[0.5rem]">
                 <div
                   style={{
                     boxShadow:
@@ -70,9 +71,10 @@ const Section4 = () => {
                 >
                   3
                 </div>
-                <div>Place Order</div>
+                <div>Ship product</div>
                 <div className="leading-[24px] text-center">
-                  Choose the type of content that your brand requires.
+                  A dedicated account manager will contact you to confirm
+                  shipping information.
                 </div>
               </div>
               <div className="relative">
@@ -81,7 +83,7 @@ const Section4 = () => {
               </div>
             </div>
             <div className="flex items-center">
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center gap-[0.5rem]">
                 <div
                   style={{
                     boxShadow:
@@ -91,9 +93,10 @@ const Section4 = () => {
                 >
                   4
                 </div>
-                <div>Place Order</div>
+                <div>Get Content</div>
                 <div className="leading-[24px] text-center">
-                  Choose the type of content that your brand requires.
+                  In 7–10 business days, all the information you want will be
+                  emailed to your mailbox.
                 </div>
               </div>
             </div>

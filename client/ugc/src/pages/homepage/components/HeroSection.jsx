@@ -13,7 +13,7 @@ const HeroSection = () => {
           className="rounded-[10px] py-[2rem] w-full"
         >
           <div className="grid grid-cols-[60%_40%] justify-items-center items-center content-between w-[80%] mx-auto">
-            <div className="">
+            <div className="flex flex-col items-start justify-start gap-[1rem]">
               <h2 className="text-[#F8FAFC] text-[30px] leading-[50px]">
                 Get user-generated content at a crazy-affordable price. We're a
                 dream for marketers and agencies.

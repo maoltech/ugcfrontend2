@@ -11,7 +11,7 @@ const Section4 = () => {
       }}
       className="py-[10rem] w-full"
     >
-      <div className="w-[80%] max-w-[1328px] mx-auto">
+      <div className="w-[80%] max-w-[1200px] mx-auto">
         <h2 className="text-center font-[600] mb-[1rem] text-[#F8FAFC] text-[2rem]">
           How it works ?
         </h2>

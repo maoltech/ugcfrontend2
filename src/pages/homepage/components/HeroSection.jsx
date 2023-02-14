@@ -6,13 +6,13 @@ import { HiOutlineShieldCheck } from "react-icons/hi";
 import { AiOutlineStar } from "react-icons/ai";
 const HeroSection = () => {
   return (
-    <div className="max-w-[1328px] mx-auto">
+    <div className="max-w-[1200px] mx-auto">
       <div className="w-[80%] mx-auto">
         <div
           style={{ backgroundImage: `url(${HeroBg})`, backgroundSize: "cover" }}
           className="rounded-[10px] py-[2rem] w-full"
         >
-          <div className="grid grid-cols-[60%_40%] justify-items-center items-center content-between w-[80%] mx-auto">
+          <div className="grid grid-cols-[60%_40%] justify-items-center items-center content-between w-[95%] mx-auto">
             <div className="flex flex-col items-start justify-start gap-[1rem]">
               <h2 className="text-[#F8FAFC] text-[30px] leading-[50px]">
                 Get user-generated content at a crazy-affordable price. We're a

@@ -7,10 +7,11 @@ const Section2 = () => {
           style={{
             backgroundImage: `url(${sectionImg})`,
             backgroundSize: "cover",
+            backgroundPosition: "bottom",
           }}
-          className="font-[500] text-white text[40px] grid grid-cols-2 md:py-[4rem] py-[2rem] px-[1rem] my-auto rounded-[10px]"
+          className="font-[500] text-white text[40px] grid grid-cols-2 items-center my-auto overflow-hidden rounded-[10px]"
         >
-          <div className="flex flex-col items-start justify-start gap-[1rem] w-[80%] mx-auto">
+          <div className="bg-gradient-to-r from-[#0041EA]/[30%] to-[#FFFF]/[0%] md:py[4rem] py-[2rem] px-[2rem] flex flex-col items-start justify-center gap-[1rem] mx-auto min-h-[400px]">
             <span className="text-[40px] leading-[60px]">
               Make your Mark and become a part of our Team
             </span>
@@ -21,7 +22,7 @@ const Section2 = () => {
               Come with Us
             </button>
           </div>
-          <div></div>
+          <div className="px-[1rem]"></div>
         </div>
       </div>
     </div>

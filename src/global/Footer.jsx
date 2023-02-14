@@ -99,9 +99,13 @@ const Footer = () => {
             <img
               src={google}
               alt="btn"
-              className="w-[100px] h-[32px] mr-[0.5rem]"
+              className="w-[120px] h-[35px] cursor-pointer mr-[0.5rem]"
             />
-            <img src={apple} alt="btn" className="w-[100px] h-[32px]" />
+            <img
+              src={apple}
+              alt="btn"
+              className="w-[120px] h-[35px] cursor-pointer"
+            />
           </div>
         </div>
       </div>

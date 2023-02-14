@@ -11,7 +11,7 @@ const Section5 = () => {
           <img
             src={img}
             alt="img"
-            className="w-[435px] h-[402px] rounded-[10px]"
+            className="w-[435px] h-[390px] rounded-[10px]"
           />
           <div className="text-[#374151] flex flex-col gap-[0.5rem] pr-[1rem]">
             <h4 className="text-[#111827] font-[500] leading-[48px]">

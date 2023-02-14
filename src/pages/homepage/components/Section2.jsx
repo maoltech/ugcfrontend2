@@ -6,9 +6,9 @@ const Section2 = () => {
         <div
           style={{
             backgroundImage: `url(${sectionImg})`,
-            backgroundSize: "center",
+            backgroundSize: "cover",
           }}
-          className="font-[500] text-white text[40px] grid grid-cols-2 py-[2rem] px-[1rem] my-auto rounded-[10px]"
+          className="font-[500] text-white text[40px] grid grid-cols-2 md:py-[4rem] py-[2rem] px-[1rem] my-auto rounded-[10px]"
         >
           <div className="flex flex-col items-start justify-start gap-[1rem] w-[80%] mx-auto">
             <span className="text-[40px] leading-[60px]">

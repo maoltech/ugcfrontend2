@@ -15,9 +15,9 @@ const Footer = () => {
   return (
     <div className="bg-gradient-to-r from-[#0041EA] to-[#2900CD] w-full">
       <div className="w-[80%] max-w-[1200px] text-white mx-auto py-[2rem] text-[1rem] flex flex-col items-stretch justify-start gap-[1rem]">
-        <div className="flex items-center justify-between border-solid border-white border-[1.5px] rounded-[10px] py-[1.5rem] px-[2rem]">
+        <div className="flex items-center justify-between border-solid border-white border-[1.5px] rounded-[20px] py-[1rem] px-[3rem]">
           <div className="flex flex-col items-start justify-between">
-            <h4>Subscribe to UGChub</h4>
+            <h4 className="mb-[0.5rem]">Subscribe to UGChub</h4>
             <span>
               Get the newsletters and guides directly on your email from us{" "}
             </span>

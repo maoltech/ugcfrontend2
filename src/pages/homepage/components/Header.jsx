@@ -12,7 +12,9 @@ const Header = () => {
             className="w-[100px] h-[60px] justify-self-start"
           />
           <Button className={"bg-[#0030AB] text-white"}>Post Content</Button>
-          <Button>Browse Services</Button>
+          <Button>
+            <Link to="/services">Browse Services</Link>
+          </Button>
           <Button>How it Works</Button>
         </div>
         <div className="flex items-center justify-end">

@@ -1,4 +1,4 @@
-import Header from "../homepage/components/Header";
+import Header from "./components/Header";
 import Footer from "../../global/Footer";
 import HeroSection from "./components/HeroSection";
 const ServicesPage = () => {

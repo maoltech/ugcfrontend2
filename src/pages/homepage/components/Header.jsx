@@ -1,5 +1,6 @@
 import Logo from "../../../assets/logo.svg";
 import Button from "../../../global/Button";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="w-full bg-[#F8FAFC] shadow-[0px 2px 6px] shadow-[#0000]/[6%]">
@@ -15,8 +16,12 @@ const Header = () => {
           <Button>How it Works</Button>
         </div>
         <div className="flex items-center justify-end">
-          <Button>Sign Up</Button>
-          <Button>Log In</Button>
+          <Button>
+            <Link to="/signup">Sign Up</Link>
+          </Button>
+          <Button>
+            <Link to="/login">Log In</Link>
+          </Button>
           <Button className={"bg-[#0030AB]/[6%] text-[#0030AB]"}>
             Become a seller
           </Button>

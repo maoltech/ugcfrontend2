@@ -1,6 +1,5 @@
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
-import React, { useState } from "react";
-// import PasswordValidationModal from "pages/onboarding/signup/components/PasswordValidationModal";
+import { useState } from "react";
 const Input = ({
   type,
   placeholder,
@@ -13,15 +12,13 @@ const Input = ({
   errorState,
   handleChange,
   handleBlur,
-  prefixData,
-  prefixSelection,
-  setPrefixSelection,
 }) => {
+  console.log(errorState);
   const [showPassword, setShowPassword] = useState(false);
   const id = label?.split(" ").join("").toLowerCase();
   return (
-    <div className="text-[16px] leading-[160%] py-[0.3rem] pt-5">
-      <label className="font-[600] text-[#181336]" htmlFor={id}>
+    <div className="text-[16px] leading-[160%] pb-[0.2rem]">
+      <label className="font-[600] text-[#181336] text-[0.8rem]" htmlFor={id}>
         {label}
       </label>
       <div className="flex relative items-stretch justifystart">
@@ -40,11 +37,11 @@ const Input = ({
           onChange={handleChange}
           onBlur={handleBlur}
           autoComplete="off"
-          className={`w-full truncate font-[400] inline-block ${
+          className={`w-full truncate bg-[#F8FAFC] font-[400] inline-block ${
             prefix
               ? "rounded-tl-[0px] rounded-tr-[5px] rounded-br-[5px] rounded-bl-[0px]"
               : "rounded-[5px]"
-          } h-[40px] py-[0px] px-[16px] border-solid  border-[1.5px] text-[#899A9A] border-[#B8C9C9] focus-visible:outline-[#3180E7]`}
+          } h-[35px] py-[0px] px-[16px] border-solid  border-[1.5px] text-[#899A9A] border-[#B8C9C9] focus-visible:outline-[#3180E7]`}
         />
         {suffix && type === "password" && (
           <div className="absolute translate-y-[-50%] text-[#899A9A] top-[50%] my-auto right-[3%]">
@@ -62,8 +59,8 @@ const Input = ({
           </div>
         )}
       </div>
-      <div className="text-[#F6513B] text-[14px] font-[400] leading-[160%]">
-        {value && touchedState && errorState}
+      <div className="text-[#F6513B] text-[10px] font-[400] leading-[160%]">
+        {value && touchedState && errorState ? errorState : ""}
       </div>
     </div>
   );

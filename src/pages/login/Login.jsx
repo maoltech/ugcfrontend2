@@ -1,7 +1,7 @@
-import bg from "../../assets/registerbg.jpg";
+import bg from "../../assets/loginbg.jpg";
 import Form from "./components/Form";
 import AuthLayout from "../../global/layout/AuthLayout";
-const Register = () => {
+const Login = () => {
   return (
     <AuthLayout bgimg={bg}>
       <Form />
@@ -9,4 +9,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;

@@ -1,9 +1,5 @@
 import HeroBg from "../../../assets/herobg.svg";
-import HeroImg from "../../../assets/homeimg.svg";
-import Button from "../../../global/Button";
-import { TbUsers } from "react-icons/tb";
-import { HiOutlineShieldCheck } from "react-icons/hi";
-import { AiOutlineStar } from "react-icons/ai";
+
 const HeroSection = () => {
   return (
     <div>

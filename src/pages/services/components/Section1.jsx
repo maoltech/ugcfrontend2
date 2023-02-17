@@ -6,7 +6,16 @@ const Section1 = () => {
         <div className="text-[#111827] text-[30px] font-[800] align-center leading-[80px]">
             <h2> Services For You</h2>
         </div>
-        <ServiceCard className="w-[50px] h-[50px]"/>
+        <div className="max-w-[1200px] mx-auto w-full flex flex-wrap justify-center gap-4">
+          <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
+        </div>
     </div>
   );
 };

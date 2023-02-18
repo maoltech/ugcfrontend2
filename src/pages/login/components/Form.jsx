@@ -1,17 +1,33 @@
 import Input from "../../../global/Input";
 import Button from "../../../global/Button";
-import ReCAPTCHA from "react-google-recaptcha";
+import ButtonOverlay from "../../../global/layout/ButtonOverlay";
+import Spinner from "../../../global/antd/Spinner";
+import { statusActions } from "../../../redux/authslice/authSlice";
 import { TfiTwitter } from "react-icons/tfi";
 import { RiGoogleFill } from "react-icons/ri";
 import { useFormik } from "formik";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { login } from "../../../redux/authslice/authServices";
 
 const Form = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const auth = useSelector((state) => state.auth);
+  console.log(auth);
   const initialValues = {
     email: "",
     password: "",
   };
 
-  const onSubmit = () => {};
+  const onSubmit = (values) => {
+    dispatch(login({ ...values })).then((action) => {
+      console.log(action);
+      if (action.payload?.data) {
+        navigate("/services");
+      }
+    });
+  };
 
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
@@ -50,8 +66,15 @@ const Form = () => {
       />
       <Button
         type="submit"
-        className={"bg-[#0030AB] text-[0.8rem] mt-[1rem] text-white w-full"}
+        className={
+          "bg-[#0030AB] relative text-[0.8rem] mt-[1rem] text-white w-full"
+        }
       >
+        {auth?.isLoading === statusActions.login.loading && (
+          <ButtonOverlay>
+            <Spinner />
+          </ButtonOverlay>
+        )}
         Log In
       </Button>
       <div className="w-full border-solid border-[2px] border-[#E5E7EB] relative my-[1rem]">

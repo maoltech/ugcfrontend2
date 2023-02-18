@@ -1,7 +1,9 @@
 import bg from "../../assets/welcomebg.svg";
 import brush from "../../assets/brush.svg";
 import Button from "../../global/Button";
+import { useNavigate } from "react-router-dom";
 const WelcomePage = () => {
+  const navigate = useNavigate();
   return (
     <div
       style={{
@@ -38,7 +40,10 @@ const WelcomePage = () => {
             community of creators.
           </span>
         </div>
-        <Button className={"bg-[#0030AB] text-white self-end"}>
+        <Button
+          onClick={() => navigate("/services")}
+          className={"bg-[#0030AB] text-white self-end"}
+        >
           Check It Out
         </Button>
       </div>

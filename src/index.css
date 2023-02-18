@@ -11,3 +11,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+.ant-card-body {
+  padding: 10px !important;
+}

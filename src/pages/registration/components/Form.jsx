@@ -1,12 +1,20 @@
 import Input from "../../../global/Input";
 import Button from "../../../global/Button";
+import ButtonOverlay from "../../../global/layout/ButtonOverlay";
 import ReCAPTCHA from "react-google-recaptcha";
+import Spinner from "../../../global/antd/Spinner";
+import { useDispatch, useSelector } from "react-redux";
+import { statusActions } from "../../../redux/authslice/authSlice";
+import { useNavigate } from "react-router-dom";
 import { TfiTwitter } from "react-icons/tfi";
 import { RiGoogleFill } from "react-icons/ri";
 import { useFormik } from "formik";
 import { registrationSchema } from "../../../global/validationSchemas/registrationSchema";
+import { register } from "../../../redux/authslice/authServices";
 
 const Form = () => {
+  const navigate = useNavigate();
+  const auth = useSelector((state) => state.auth);
   const initialValues = {
     firstname: "",
     lastname: "",
@@ -16,7 +24,22 @@ const Form = () => {
     confirmpassword: "",
   };
 
-  const onSubmit = () => {};
+  const dispatch = useDispatch();
+
+  const onSubmit = (values, actions) => {
+    dispatch(
+      register({
+        ...values,
+        firstName: values.firstname,
+        lastName: values.lastname,
+      })
+    ).then((action) => {
+      console.log(action);
+      if (action.payload?.data) {
+        navigate("/welcome");
+      }
+    });
+  };
 
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
@@ -51,6 +74,14 @@ const Form = () => {
           handleBlur={handleBlur}
         />
       </div>
+      <Input
+        placeholder="User Name"
+        label="User Name"
+        required={true}
+        value={values.username}
+        handleChange={handleChange}
+        handleBlur={handleBlur}
+      />
       <Input
         placeholder="Email"
         label="Email"
@@ -90,8 +121,13 @@ const Form = () => {
       />
       <Button
         type="submit"
-        className={"bg-[#0030AB] text-[0.8rem] text-white w-full"}
+        className={"bg-[#0030AB] relative text-[0.8rem] text-white w-full"}
       >
+        {auth?.isLoading === statusActions.register.loading && (
+          <ButtonOverlay>
+            <Spinner />
+          </ButtonOverlay>
+        )}
         Sign Up
       </Button>
       <div className="w-full border-solid border-[2px] border-[#E5E7EB] relative my-[1rem]">

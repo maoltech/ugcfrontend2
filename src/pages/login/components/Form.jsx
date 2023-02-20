@@ -23,7 +23,7 @@ const Form = () => {
   const onSubmit = (values) => {
     dispatch(login({ ...values })).then((action) => {
       console.log(action);
-      if (action.payload?.data) {
+      if (action.type.includes('fulfilled')) {
         navigate("/services");
       }
     });

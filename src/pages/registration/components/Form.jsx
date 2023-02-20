@@ -35,7 +35,7 @@ const Form = () => {
       })
     ).then((action) => {
       console.log(action);
-      if (action.payload?.data) {
+      if (action.type.includes("fulfilled")) {
         navigate("/welcome");
       }
     });

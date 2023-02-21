@@ -8,7 +8,11 @@ import { RiGoogleFill } from "react-icons/ri";
 import { useFormik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { login } from "../../../redux/authslice/authServices";
+import {
+  login,
+  googleauth,
+  twitterauth,
+} from "../../../redux/authslice/authServices";
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -20,10 +24,22 @@ const Form = () => {
     password: "",
   };
 
+  const googleLogin = () => {
+    dispatch(googleauth()).then((action) => {
+      console.log(action);
+    });
+  };
+
+  const twitterLogin = () => {
+    dispatch(twitterauth()).then((action) => {
+      console.log(action);
+    });
+  };
+
   const onSubmit = (values) => {
     dispatch(login({ ...values })).then((action) => {
       console.log(action);
-      if (action.type.includes('fulfilled')) {
+      if (action.type.includes("fulfilled")) {
         navigate("/services");
       }
     });
@@ -84,16 +100,32 @@ const Form = () => {
       </div>
       <div className="flex flex-col items-start justify-between gap-[1rem]">
         <Button
-          className={"bg-[#1D9BF0] text-[0.8rem] px-[0.5rem] text-white w-full"}
+          className={
+            "bg-[#1D9BF0] relative text-[0.8rem] px-[0.5rem] text-white w-full"
+          }
+          onClick={twitterLogin}
         >
+          {auth?.isLoading === statusActions.twitterauth.loading && (
+            <ButtonOverlay>
+              <Spinner />
+            </ButtonOverlay>
+          )}
           <div className="relative">
             <TfiTwitter className="absolute left-[1%] top-[50%] translate-y-[-50%]" />
             <span>Log In with Twitter</span>
           </div>
         </Button>
         <Button
-          className={"bg-[#E94235] text-[0.8rem] px-[0.5rem] text-white w-full"}
+          className={
+            "bg-[#E94235] relative text-[0.8rem] px-[0.5rem] text-white w-full"
+          }
+          onClick={googleLogin}
         >
+          {auth?.isLoading === statusActions.googleauth.loading && (
+            <ButtonOverlay>
+              <Spinner />
+            </ButtonOverlay>
+          )}
           <div className="relative">
             <RiGoogleFill className="absolute left-[1%] top-[50%] translate-y-[-50%]" />
             <span>Log In with Google</span>

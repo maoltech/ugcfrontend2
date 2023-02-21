@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseURL = "https://ugc.onrender.com/api";
+const baseURL = "https://ugc-backend2.onrender.com/api";
 
 const api = axios.create({
   baseURL: baseURL,

@@ -4,6 +4,7 @@ import Login from "../pages/login/Login";
 import HomePage from "../pages/homepage/HomePage";
 import ServicesPage from "../pages/services/Services";
 import WelcomePage from "../pages/welcomepage/WelcomePage";
+import ExternalLink from "../pages/externallinks/ExternalLink";
 
 const RoutesManager = () => {
   return (
@@ -13,6 +14,7 @@ const RoutesManager = () => {
       <Route path="login" element={<Login />} />
       <Route path="welcome" element={<WelcomePage />} />
       <Route path="services" element={<ServicesPage />} />
+      <Route path="api/auth" element={<ExternalLink />} />
     </Routes>
   );
 };

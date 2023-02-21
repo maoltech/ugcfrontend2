@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { login, register } from "./authServices";
+import { login, register, googleauth, twitterauth } from "./authServices";
 
 const initialState = {
   user: {},
@@ -14,6 +14,12 @@ export const statusActions = {
   },
   register: {
     loading: "registerpending",
+  },
+  googleauth: {
+    loading: "googleauthpending",
+  },
+  twitterauth: {
+    loading: "twitterauthpending",
   },
 };
 
@@ -32,14 +38,34 @@ const authSlice = createSlice({
     builder.addCase(login.rejected, (state, action) => {
       state.isLoading = "";
     });
-    builder.addCase(register.pending, (state, action) => {
+    builder.addCase(register.pending, (state) => {
       state.isLoading = statusActions.register.loading;
     });
     builder.addCase(register.fulfilled, (state, action) => {
       state.isLoading = "";
       state.user = action.payload.data;
     });
-    builder.addCase(register.rejected, (state, action) => {
+    builder.addCase(register.rejected, (state) => {
+      state.isLoading = "";
+    });
+    builder.addCase(googleauth.pending, (state) => {
+      state.isLoading = statusActions.googleauth.loading;
+    });
+    builder.addCase(googleauth.fulfilled, (state, action) => {
+      state.isLoading = "";
+      state.user = action.payload.data;
+    });
+    builder.addCase(googleauth.rejected, (state) => {
+      state.isLoading = "";
+    });
+    builder.addCase(twitterauth.pending, (state) => {
+      state.isLoading = statusActions.twitterauth.loading;
+    });
+    builder.addCase(twitterauth.fulfilled, (state, action) => {
+      state.isLoading = "";
+      state.user = action.payload.data;
+    });
+    builder.addCase(twitterauth.rejected, (state) => {
       state.isLoading = "";
     });
   },

@@ -10,7 +10,11 @@ import { TfiTwitter } from "react-icons/tfi";
 import { RiGoogleFill } from "react-icons/ri";
 import { useFormik } from "formik";
 import { registrationSchema } from "../../../global/validationSchemas/registrationSchema";
-import { register } from "../../../redux/authslice/authServices";
+import {
+  register,
+  googleauth,
+  twitterauth,
+} from "../../../redux/authslice/authServices";
 
 const Form = () => {
   const navigate = useNavigate();
@@ -25,6 +29,18 @@ const Form = () => {
   };
 
   const dispatch = useDispatch();
+
+  const googleSignup = () => {
+    dispatch(googleauth()).then((action) => {
+      console.log(action);
+    });
+  };
+
+  const twitterSignup = () => {
+    dispatch(twitterauth()).then((action) => {
+      console.log(action);
+    });
+  };
 
   const onSubmit = (values, actions) => {
     dispatch(
@@ -138,7 +154,13 @@ const Form = () => {
       <div className="flex flex-col items-start justify-between gap-[0.5rem]">
         <Button
           className={"bg-[#1D9BF0] text-[0.8rem] px-[0.5rem] text-white w-full"}
+          onClick={twitterSignup}
         >
+          {auth?.isLoading === statusActions.twitterauth.loading && (
+            <ButtonOverlay>
+              <Spinner />
+            </ButtonOverlay>
+          )}
           <div className="relative">
             <TfiTwitter className="absolute left-[1%] top-[50%] translate-y-[-50%]" />
             <span>Sign Up with Twitter</span>
@@ -146,7 +168,13 @@ const Form = () => {
         </Button>
         <Button
           className={"bg-[#E94235] text-[0.8rem] px-[0.5rem] text-white w-full"}
+          onClick={googleSignup}
         >
+          {auth?.isLoading === statusActions.googleauth.loading && (
+            <ButtonOverlay>
+              <Spinner />
+            </ButtonOverlay>
+          )}
           <div className="relative">
             <RiGoogleFill className="absolute left-[1%] top-[50%] translate-y-[-50%]" />
             <span>Sign Up with Google</span>

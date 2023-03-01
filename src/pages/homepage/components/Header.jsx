@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="w-full bg-[#F8FAFC] shadow-[0px 2px 6px] shadow-[#0000]/[6%]">
-      <div className="grid grid-cols-[60%_40%] w-[80%] max-w-[1200px] mx-auto py-[0.2rem] content-center text-[1rem] font-[400] leading-[27px] text-[#111827]">
+      <div className="grid grid-cols-[60%_40%] w-[90%] max-w-[1200px] mx-auto py-[0.2rem] content-between text-[0.8rem] font-[400] leading-[27px] text-[#111827]">
         <div className="flex items-center justify-between">
           <img
             src={Logo}

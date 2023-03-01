@@ -7,7 +7,7 @@ import { AiOutlineStar } from "react-icons/ai";
 const HeroSection = () => {
   return (
     <div className="max-w-[1200px] mx-auto">
-      <div className="w-[80%] mx-auto">
+      <div className="w-[85%] mx-auto">
         <div
           style={{ backgroundImage: `url(${HeroBg})`, backgroundSize: "cover" }}
           className="rounded-[10px] py-[2rem] w-full"
@@ -21,7 +21,7 @@ const HeroSection = () => {
               <Button className={"bg-[#0030AB] text-white mt-[1rem]"}>
                 Get Your UGC Today
               </Button>
-              <div className="text-[1rem] font-[400] leading-[24px] text-white w[80%] flex items-center justify-between pt-[1rem] gap-[1rem]">
+              <div className="text-[1rem] font-[400] leading-[24px] text-white w[90%] flex items-center justify-between pt-[1rem] gap-[0.5rem]">
                 <span className="flex items-center">
                   <TbUsers />
                   <span>1M+ customers</span>

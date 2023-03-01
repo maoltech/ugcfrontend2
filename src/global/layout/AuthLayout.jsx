@@ -1,11 +1,11 @@
 import logo from "../../assets/logo.svg";
 const AuthLayout = ({ bgimg, children }) => {
   return (
-    <div className="grid grid-cols-2 bg-[#F8FAFC] h-screen">
-      <div className="bg-gradient-to-r from-[#0041EA]/[80%] to-[#2900CD]/[80%] h-screen">
-        <div className="grid grid-cols-[20%_80%] justify-items-end content-between h-screen">
+    <div className="grid grid-cols-2 bg-[#F8FAFC]  min-h-screen">
+      <div className="bg-gradient-to-r from-[#0041EA]/[80%] to-[#2900CD]/[80%] min-h-screen overflow-hidden">
+        <div className="grid grid-cols-[20%_80%] justify-items-end content-between min-h-screen">
           <div></div>
-          <div className="my-auto grid grid-cols-1 h-screen overflow-hidden w-full bg-transparent">
+          <div className="my-auto grid grid-cols-1 h-screen w-full bg-transparent">
             <div
               style={{
                 backgroundImage: `url(${bgimg})`,
@@ -29,7 +29,7 @@ const AuthLayout = ({ bgimg, children }) => {
           </div>
         </div>
       </div>
-      <div className="w-[80%] m-auto">{children}</div>
+      <div className="w-[80%] m-auto overflow-y-scroll">{children}</div>
     </div>
   );
 };

@@ -18,10 +18,6 @@ export const googleauth = createAsyncThunk("auth/google", async () => {
     "popup",
     "popup=true"
   );
-  // const response = await getAPI("auth/google");
-  // console.log(response);
-  // // window.open(response);
-  // return response;
 });
 
 export const twitterauth = createAsyncThunk("auth/twitter", async () => {

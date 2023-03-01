@@ -33,7 +33,7 @@ const authSlice = createSlice({
     });
     builder.addCase(login.fulfilled, (state, action) => {
       state.isLoading = "";
-      state.user = action.payload.data;
+      state.user = action.payload.user;
     });
     builder.addCase(login.rejected, (state, action) => {
       state.isLoading = "";
@@ -43,7 +43,7 @@ const authSlice = createSlice({
     });
     builder.addCase(register.fulfilled, (state, action) => {
       state.isLoading = "";
-      state.user = action.payload.data;
+      state.user = action.payload.user;
     });
     builder.addCase(register.rejected, (state) => {
       state.isLoading = "";
@@ -53,7 +53,7 @@ const authSlice = createSlice({
     });
     builder.addCase(googleauth.fulfilled, (state, action) => {
       state.isLoading = "";
-      state.user = action.payload.data;
+      state.user = action.payload;
     });
     builder.addCase(googleauth.rejected, (state) => {
       state.isLoading = "";

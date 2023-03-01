@@ -1,5 +1,4 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
 import { getAPI, postAPI } from "../../api/api";
 
 export const register = createAsyncThunk("auth/register", async (body) => {
@@ -13,17 +12,9 @@ export const login = createAsyncThunk("auth/login", async (body) => {
 });
 
 export const googleauth = createAsyncThunk("auth/google", async () => {
-  window.open(
-    "https://ugc-backend2.onrender.com/api/auth/google",
-    "popup",
-    "popup=true"
-  );
+  window.open("https://ugc-backend2.onrender.com/api/auth/google", "_self");
 });
 
 export const twitterauth = createAsyncThunk("auth/twitter", async () => {
-  window.open(
-    "https://ugc-backend2.onrender.com/api/auth/twitter",
-    "popup",
-    "popup=true"
-  );
+  window.open("https://ugc-backend2.onrender.com/api/auth/twitter", "_self");
 });

@@ -19,9 +19,8 @@ const Form = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const auth = useSelector((state) => state.auth);
-  console.log(auth);
   const initialValues = {
-    login: "",
+    emailusername: "",
     password: "",
   };
 
@@ -38,7 +37,9 @@ const Form = () => {
   };
 
   const onSubmit = (values) => {
-    dispatch(login({ ...values })).then((action) => {
+    dispatch(
+      login({ login: values.emailusername, password: values.password })
+    ).then((action) => {
       console.log(action);
       if (action.type.includes("fulfilled")) {
         navigate("/services");

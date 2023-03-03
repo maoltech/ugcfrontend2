@@ -13,9 +13,8 @@ const Input = ({
   handleChange,
   handleBlur,
 }) => {
-  console.log(errorState);
   const [showPassword, setShowPassword] = useState(false);
-  const id = label?.split(" ").join("").toLowerCase();
+  const id = label?.split(" ").join("").split("/").join("").toLowerCase();
   return (
     <div className="text-[16px] leading-[160%] pb-[0.2rem]">
       <label className="font-[600] text-[#181336] text-[0.8rem]" htmlFor={id}>

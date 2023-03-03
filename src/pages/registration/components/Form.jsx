@@ -5,7 +5,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import Spinner from "../../../global/antd/Spinner";
 import { useDispatch, useSelector } from "react-redux";
 import { statusActions } from "../../../redux/authslice/authSlice";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { TfiTwitter } from "react-icons/tfi";
 import { RiGoogleFill } from "react-icons/ri";
 import { useFormik } from "formik";
@@ -146,6 +146,14 @@ const Form = () => {
         )}
         Sign Up
       </Button>
+      <div className="self-start font-[500] text-center tracking-[0.25px] text-[14px] leading-[23px] text-black pt2">
+        <p>
+          Already have an Account?{" "}
+          <Link to="/login" className="text-[#0030AB]">
+            Log In
+          </Link>
+        </p>
+      </div>
       <div className="w-full border-solid border-[2px] border-[#E5E7EB] relative my-[1rem]">
         <div className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] mx-auto p-[0.2rem] text-[0.6rem] bg-white rounded-full">
           OR

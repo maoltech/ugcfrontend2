@@ -2,6 +2,7 @@ import Input from "../../../global/Input";
 import Button from "../../../global/Button";
 import ButtonOverlay from "../../../global/layout/ButtonOverlay";
 import Spinner from "../../../global/antd/Spinner";
+import { Link } from "react-router-dom";
 import { statusActions } from "../../../redux/authslice/authSlice";
 import { TfiTwitter } from "react-icons/tfi";
 import { RiGoogleFill } from "react-icons/ri";
@@ -20,7 +21,7 @@ const Form = () => {
   const auth = useSelector((state) => state.auth);
   console.log(auth);
   const initialValues = {
-    email: "",
+    login: "",
     password: "",
   };
 
@@ -60,11 +61,10 @@ const Form = () => {
         <div className="font-[600] tex-[1.5rem]">Login with your account</div>
       </div>
       <Input
-        type="email"
-        placeholder="Email"
-        label="Email"
+        placeholder="Email/Username"
+        label="Email/Username"
         required={true}
-        value={values.email}
+        value={values.login}
         handleChange={handleChange}
         handleBlur={handleBlur}
       />
@@ -93,6 +93,21 @@ const Form = () => {
         )}
         Log In
       </Button>
+      <div className="flex items-center justify-between">
+        <div className="my4">
+          <Link to="/reset-password" className="text-[#0030AB]">
+            Forget password?
+          </Link>
+        </div>
+        <div className="font-[500] text-center tracking-[0.25px] text-[14px] leading-[23px] text-black pt2">
+          <p>
+            Don't have an Account?{" "}
+            <Link to="/signup" className="text-[#0030AB]">
+              Sign Up
+            </Link>
+          </p>
+        </div>
+      </div>
       <div className="w-full border-solid border-[2px] border-[#E5E7EB] relative my-[1rem]">
         <div className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] mx-auto p-[0.2rem] text-[0.6rem] bg-white rounded-full">
           OR

@@ -29,7 +29,7 @@ const AuthLayout = ({ bgimg, children }) => {
           </div>
         </div>
       </div>
-      <div className="w-[80%] m-auto overflow-y-scroll">{children}</div>
+      <div className="w-[80%] m-auto">{children}</div>
     </div>
   );
 };

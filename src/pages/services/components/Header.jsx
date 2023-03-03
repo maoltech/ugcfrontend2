@@ -1,11 +1,52 @@
 import Logo from "../../../assets/logo.svg";
 import Button from "../../../global/Button";
+import PopOverLay from "../../../global/antd/PopOver";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { TbNews } from "react-icons/tb";
-import { HiOutlineBell } from "react-icons/hi";
+import {
+  HiOutlineBell,
+  HiOutlineUserCircle,
+  HiUserCircle,
+} from "react-icons/hi";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { HiUserCircle } from "react-icons/hi";
+import { FiUserCheck, FiSettings } from "react-icons/fi";
+import { CgSearchFound } from "react-icons/cg";
+import { TfiWorld } from "react-icons/tfi";
+import { BiLogOut } from "react-icons/bi";
+
+const ProfileDropDown = () => {
+  return (
+    <div>
+      <div className="flex flex-col items-start justify-center border-t border-solid border-[#E5E7EB] w-[80%] mx-auto">
+        <div>
+          <HiOutlineUserCircle />
+          <span>About Me</span>
+        </div>
+        <div>
+          <FiUserCheck />
+          <span>Become a UGC Creator</span>
+        </div>
+        <div>
+          <CgSearchFound />
+          <span>Send Search Request</span>
+        </div>
+        <div>
+          <TfiWorld />
+          <span>Language</span>
+        </div>
+      </div>
+      <div>
+        <FiSettings />
+        <span>Settings</span>
+      </div>
+      <div>
+        <BiLogOut />
+        <span>Log out</span>
+      </div>
+    </div>
+  );
+};
 
 const Header = () => {
   const user = useSelector((state) => state.auth.user);

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { ToastContainer, toast } from "react-toastify";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 
@@ -11,6 +12,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <App />
+      <ToastContainer position={toast.POSITION.TOP_RIGHT} autoClose={3000} />
     </Provider>
   </React.StrictMode>
 );

@@ -15,6 +15,7 @@ import {
   googleauth,
   twitterauth,
 } from "../../../redux/authslice/authServices";
+import { toast } from "react-toastify";
 
 const Form = () => {
   const navigate = useNavigate();
@@ -49,12 +50,18 @@ const Form = () => {
         firstName: values.firstname,
         lastName: values.lastname,
       })
-    ).then((action) => {
-      console.log(action);
-      if (action.type.includes("fulfilled")) {
+    )
+      .unwrap()
+      .then((action) => {
+        console.log(action);
         navigate("/welcome");
-      }
-    });
+      })
+      .catch((error) => {
+        console.log(error, error.response, error.request);
+        let errorObject = JSON.parse(JSON.stringify(error));
+        console.log(errorObject);
+        toast.error(error.message);
+      });
   };
 
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =

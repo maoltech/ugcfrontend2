@@ -7,7 +7,7 @@ import Section3 from "../homepage/components/Section5";
 const ServicesPage = () => {
   return (
     <div className="w-full overflow-hidden mx-auto flex flex-col items-start justify-start gap-[2rem]">
-      <Header />
+      {/* <Header /> */}
       <HeroSection />
       <Section1 />
       <Section2 />

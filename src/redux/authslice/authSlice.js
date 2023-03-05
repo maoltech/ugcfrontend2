@@ -1,5 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { login, register, googleauth, twitterauth } from "./authServices";
+import {
+  login,
+  register,
+  googleauth,
+  twitterauth,
+  getProfile,
+} from "./authServices";
 
 const initialState = {
   user: {},
@@ -20,6 +26,9 @@ export const statusActions = {
   },
   twitterauth: {
     loading: "twitterauthpending",
+  },
+  getProfile: {
+    loading: "getProfilepending",
   },
 };
 
@@ -66,6 +75,16 @@ const authSlice = createSlice({
       state.user = action.payload.data;
     });
     builder.addCase(twitterauth.rejected, (state) => {
+      state.isLoading = "";
+    });
+    builder.addCase(getProfile.pending, (state, action) => {
+      state.isLoading = statusActions.getProifle.loading;
+    });
+    builder.addCase(getProfile.fulfilled, (state, action) => {
+      state.isLoading = "";
+      state.user = action.payload.user;
+    });
+    builder.addCase(getProfile.rejected, (state, action) => {
       state.isLoading = "";
     });
   },

@@ -1,4 +1,3 @@
-import React from "react";
 import ServiceCard from "../../../global/ServiceCard";
 import { Pagination } from "antd";
 const Section1 = () => {

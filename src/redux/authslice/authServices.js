@@ -11,6 +11,11 @@ export const login = createAsyncThunk("auth/login", async (body) => {
   return response.data;
 });
 
+export const getProfile = createAsyncThunk("auth/profile", async (signal) => {
+  const response = await getAPI("auth/me", signal);
+  return response.data;
+});
+
 export const googleauth = createAsyncThunk("auth/google", async () => {
   window.open("https://ugc-backend2.onrender.com/api/auth/google", "_self");
 });

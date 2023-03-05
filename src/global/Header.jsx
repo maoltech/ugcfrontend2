@@ -1,6 +1,6 @@
-import Logo from "../../../assets/logo.svg";
-import Button from "../../../global/Button";
-import PopOverLay from "../../../global/antd/PopOver";
+import Logo from "../assets/logo.svg";
+import Button from "./Button";
+import PopOverLay from "./antd/PopOver";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { TbNews } from "react-icons/tb";

@@ -16,7 +16,7 @@ const HeroSeection = () => {
         >
           <div className="grid grid-cols-3 justify-items-center items-center content-between w-[95%] mx-auto gap-[1rem]">
             <div>
-              <div className="flex bg-[#F8FAFC] p-[15px] flex flex-col items-center justify-start">
+              <div className="bg-[#F8FAFC] p-[15px] flex flex-col items-center justify-start">
                 <div className="relative">
                   <HiUserCircle className="text-[4rem] text-[#0030AB]/[6%]" />
                   <GoVerified className="absolute bottom-[-5%]" />

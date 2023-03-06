@@ -19,7 +19,7 @@ const HeroSection = () => {
           className="rounded-[10px] py-[2rem] w-full"
         >
           <div className="grid grid-cols-3 justify-items-center items-center content-between w-[95%] mx-auto gap-[1rem]">
-            <div className="bg-[#F8FAFC] rounded-[10px]">
+            <div className="bg-[#F8FAFC] rounded-[10px] min-w-[200px]">
               <div className="mx-auto px-[15px] py-[10px] flex flex-col items-center justify-center gap-[0.5rem]">
                 <div className="relative">
                   <HiUserCircle className="text-[6rem] text-[#0030AB]/[6%]" />

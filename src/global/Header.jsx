@@ -23,7 +23,7 @@ const ProfileDropDown = () => {
         <div className="flex flex-col items-start justify-start gap-[0.8rem]">
           <div className="flex items-center justify-between gap-[0.5rem] cursor-pointer">
             <HiOutlineUserCircle />
-            <span>About Me</span>
+            <Link to="/aboutme">About Me</Link>
           </div>
           <div className="flex items-center gap-[0.5rem] cursor-pointer">
             <FiUserCheck />

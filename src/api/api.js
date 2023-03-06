@@ -1,6 +1,6 @@
 import axios from "axios";
-// const baseURL = "https://ugc-backend2.onrender.com/api";
-const baseURL = "http://localhost:4000/api";
+const baseURL = "https://ugc-backend2.onrender.com/api";
+// const baseURL = "http://localhost:4000/api";
 const authapi = axios.create({
   baseURL: baseURL,
 });
